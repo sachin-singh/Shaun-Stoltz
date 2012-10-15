@@ -1,0 +1,8 @@
+Reading Config
+==========================================
+Test Started @ 2012/10/08 17:10:35
+Logging in....@ 2012/10/08 17:10:45
+Navigating to Entity and Contact Page.... @ 2012/10/08 17:10:54
+Creating new Entity....@ 2012/10/08 17:10:54
+Test completed @ 2012/10/08 17:11:04
+==========================================
