@@ -8,7 +8,8 @@
       
       <class name="com.gopromis.ScriptTest">
           <methods>
-              <include name="createEntityTest"></include>
+<!--               <include name="createEntityTest"></include> -->
+              <include name="searchEntityTest"></include>
                
           </methods>
           </class>

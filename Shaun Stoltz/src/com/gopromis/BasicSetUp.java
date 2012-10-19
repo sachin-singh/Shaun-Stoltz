@@ -16,6 +16,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -124,7 +125,7 @@ public class BasicSetUp {
       File scrFile = ((TakesScreenshot)augmentedDriver).
                           getScreenshotAs(OutputType.FILE);
 		
-		FileUtils.copyFile(scrFile, new File("c:\\tmp\\"+err+".png"));
+		FileUtils.copyFile(scrFile, new File(err+".png"));
 	}
 	
 	/**
@@ -215,6 +216,36 @@ public class BasicSetUp {
 		else{
 			writeText(text + " NOT FOUND!");
 			System.out.println(text + " NOT FOUND!");
+		}
+	}
+	
+	public void isTextPresent(By by, String text){  
+		String bystring="";	
+		 boolean result = false ;
+		 if(isElementPresent(by)){
+			 bystring = driver.findElement(by).getText().toString();
+			 if(bystring.equals(text)){
+				 result= true;
+			 }
+		 }
+		if(result == true){ 
+			writeText(text + " FOUND!");
+			System.out.println(text + " FOUND!");
+		}
+		else{
+			writeText(text + " NOT FOUND!");
+			System.out.println(text + " NOT FOUND!");
+		}
+	}
+	
+	
+	public void waitfor(By by) throws Exception{
+		try{
+			new WebDriverWait(driver, 60).until(ExpectedConditions.presenceOfElementLocated(by));
+		}
+		catch(NoSuchElementException e){
+			writeText("Element did not showed up or not present.... @"+ getDate());
+			System.out.println("Element did not showed up or not present.... @"+ getDate());
 		}
 	}
 	

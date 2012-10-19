@@ -3,6 +3,7 @@ package com.gopromis;
 import java.io.FileInputStream;
 import java.util.Properties;
 
+import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
 
@@ -50,6 +51,17 @@ public class ScriptTest extends BasicSetUp {
 		entityContactPage = homePage.gotoEntityandContact();
 		entityContactPage.createEntity(prop);
 		
+	}
+	
+	@Test(description = "Search Entity")
+	public void searchEntityTest() throws Exception{
+		String legalFormName = prop.getProperty("search_legalFormName");
+		login();
+		entityContactPage = homePage.gotoEntityandContact();
+		
+		entityContactPage.searchEntityByLegalFormName(legalFormName);
+		sleep(10);
+		isTextPresent(By.xpath("//div[@id='yw0']/table/tbody/tr/td[2]"),legalFormName);
 	}
 	
 	

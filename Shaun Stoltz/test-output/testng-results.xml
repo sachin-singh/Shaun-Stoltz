@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="32344" started-at="2012-10-10T13:56:07Z" finished-at="2012-10-10T13:56:40Z">
+  <suite name="Suite" duration-ms="46881" started-at="2012-10-19T12:41:40Z" finished-at="2012-10-19T12:42:27Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="32344" started-at="2012-10-10T13:56:07Z" finished-at="2012-10-10T13:56:40Z">
+    <test name="Test" duration-ms="46881" started-at="2012-10-19T12:41:40Z" finished-at="2012-10-19T12:42:27Z">
       <class name="com.gopromis.ScriptTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.gopromis.ScriptTest@5e3974]" name="setUp" is-config="true" duration-ms="12612" started-at="2012-10-10T19:25:55Z" finished-at="2012-10-10T19:26:07Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.gopromis.ScriptTest@5e3974]" name="setUp" is-config="true" duration-ms="11024" started-at="2012-10-19T18:11:29Z" finished-at="2012-10-19T18:11:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="createEntityTest()[pri:0, instance:com.gopromis.ScriptTest@5e3974]" name="createEntityTest" duration-ms="32315" started-at="2012-10-10T19:26:07Z" description="Create New Entity" finished-at="2012-10-10T19:26:40Z">
+        <test-method status="PASS" signature="searchEntityTest()[pri:0, instance:com.gopromis.ScriptTest@5e3974]" name="searchEntityTest" duration-ms="46859" started-at="2012-10-19T18:11:40Z" description="Search Entity" finished-at="2012-10-19T18:12:27Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createEntityTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.gopromis.ScriptTest@5e3974]" name="tearDown" is-config="true" duration-ms="448" started-at="2012-10-10T19:26:40Z" finished-at="2012-10-10T19:26:40Z">
+        </test-method> <!-- searchEntityTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.gopromis.ScriptTest@5e3974]" name="tearDown" is-config="true" duration-ms="287" started-at="2012-10-19T18:12:27Z" finished-at="2012-10-19T18:12:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

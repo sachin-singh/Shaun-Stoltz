@@ -53,12 +53,72 @@ public class EntityContactPage extends BasicSetUp {
 			new Select(driver.findElement(By.id("ddl_day"))).selectByVisibleText("30");
 			new Select(driver.findElement(By.id("ddl_payment_method"))).selectByVisibleText("EFT");
 			driver.findElement(By.id("btnEntitySave")).click();
+			sleep(10);
 			
 			
 		}
 		catch(Exception e){
+			captureScreen("createEntity_"+randoms);
 			writeText("Error: While Creating new Entity....@ "+getDate());
 			System.out.println("Error: While Creating new Entity....@ "+getDate());
+		}
+	}
+	
+	
+	
+	public void searchEntityByLegalFormName(String query) throws Exception{
+		writeText("Searching "+query+" ....@ "+getDate());
+		System.out.println("Searching "+query+" ....@ "+getDate());
+		try{
+			new WebDriverWait(driver, 60).until(ExpectedConditions.presenceOfElementLocated(By.name("Entity[legal_form_name]")));
+			driver.findElement(By.name("Entity[legal_form_name]")).sendKeys(query);
+			driver.findElement(By.id("yw0")).click();
+			 
+			
+		}
+		catch(Exception e){
+			captureScreen("searchEntityByLegalFormName_"+randoms);
+			writeText("Error: While Searching "+query+" ....@ "+getDate());
+			System.out.println("Error: While Searching "+query+" ....@ "+getDate());
+		}
+	}
+	
+	public void gotoContactsTab() throws Exception{
+		writeText("Navigating to contact tab....@ "+getDate());
+		System.out.println("Navigating to contact tab....@ "+getDate());
+		try{
+			waitfor(By.cssSelector("img[alt=\"update\"]"));
+			driver.findElement(By.cssSelector("img[alt=\"update\"]")).click();
+			driver.findElement(By.linkText("Contacts")).click();
+			 
+			
+		}
+		catch(Exception e){
+			captureScreen("gotoContactsTab_"+randoms);
+			writeText("Error: While Navigating to contact tab....@ "+getDate());
+			System.out.println("Error: While Navigating to contact tab....@ "+getDate());
+		}
+	}
+	
+	
+	public void addContactinExistingList() throws Exception{
+		
+	}
+	
+	public void gotoPropertiesTab() throws Exception{
+		writeText("Navigating to Properties tab....@ "+getDate());
+		System.out.println("Navigating to Properties tab....@ "+getDate());
+		try{
+			waitfor(By.cssSelector("img[alt=\"update\"]"));
+			driver.findElement(By.cssSelector("img[alt=\"update\"]")).click();
+			driver.findElement(By.linkText("Properties")).click();
+			 
+			
+		}
+		catch(Exception e){
+			captureScreen("gotoPropertiesTab_"+randoms);
+			writeText("Error: While Navigating to Properties tab....@ "+getDate());
+			System.out.println("Error: While Navigating to Properties tab....@ "+getDate());
 		}
 	}
 
